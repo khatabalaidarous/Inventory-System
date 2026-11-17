@@ -1,0 +1,197 @@
+﻿namespace InventorySystem.UI.Forms
+{
+    partial class frmUnitEdit
+    {
+        private System.ComponentModel.IContainer components = null;
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+                components.Dispose();
+            base.Dispose(disposing);
+        }
+
+        private void InitializeComponent()
+        {
+            this.pnlHeader = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.pnlBody = new System.Windows.Forms.Panel();
+            this.txtSymbol = new System.Windows.Forms.TextBox();
+            this.lblSymbol = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.pnlFooter = new System.Windows.Forms.Panel();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.pnlHeader.SuspendLayout();
+            this.pnlBody.SuspendLayout();
+            this.pnlFooter.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // pnlHeader
+            // 
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.pnlHeader.Controls.Add(this.lblTitle);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(642, 86);
+            this.pnlHeader.TabIndex = 0;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(0, 0);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
+            this.lblTitle.Size = new System.Drawing.Size(642, 86);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "إضافة وحدة";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pnlBody
+            // 
+            this.pnlBody.BackColor = System.Drawing.Color.White;
+            this.pnlBody.Controls.Add(this.txtSymbol);
+            this.pnlBody.Controls.Add(this.lblSymbol);
+            this.pnlBody.Controls.Add(this.txtName);
+            this.pnlBody.Controls.Add(this.lblName);
+            this.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBody.Location = new System.Drawing.Point(0, 86);
+            this.pnlBody.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlBody.Name = "pnlBody";
+            this.pnlBody.Padding = new System.Windows.Forms.Padding(47, 49, 47, 49);
+            this.pnlBody.Size = new System.Drawing.Size(642, 222);
+            this.pnlBody.TabIndex = 1;
+            // 
+            // txtSymbol
+            // 
+            this.txtSymbol.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtSymbol.Location = new System.Drawing.Point(47, 160);
+            this.txtSymbol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSymbol.Name = "txtSymbol";
+            this.txtSymbol.Size = new System.Drawing.Size(548, 34);
+            this.txtSymbol.TabIndex = 3;
+            // 
+            // lblSymbol
+            // 
+            this.lblSymbol.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblSymbol.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.lblSymbol.Location = new System.Drawing.Point(47, 123);
+            this.lblSymbol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSymbol.Name = "lblSymbol";
+            this.lblSymbol.Size = new System.Drawing.Size(548, 31);
+            this.lblSymbol.TabIndex = 2;
+            this.lblSymbol.Text = "🏷️  الرمز (اختياري):";
+            this.lblSymbol.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // txtName
+            // 
+            this.txtName.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtName.Location = new System.Drawing.Point(47, 74);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(548, 34);
+            this.txtName.TabIndex = 1;
+            // 
+            // lblName
+            // 
+            this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.lblName.Location = new System.Drawing.Point(47, 37);
+            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(548, 31);
+            this.lblName.TabIndex = 0;
+            this.lblName.Text = "📝  اسم الوحدة: *";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // pnlFooter
+            // 
+            this.pnlFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.pnlFooter.Controls.Add(this.btnCancel);
+            this.pnlFooter.Controls.Add(this.btnSave);
+            this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlFooter.Location = new System.Drawing.Point(0, 308);
+            this.pnlFooter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlFooter.Name = "pnlFooter";
+            this.pnlFooter.Size = new System.Drawing.Size(642, 98);
+            this.pnlFooter.TabIndex = 2;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(47, 22);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(187, 55);
+            this.btnCancel.TabIndex = 1;
+            this.btnCancel.Text = "❌ إلغاء";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(408, 22);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(187, 55);
+            this.btnSave.TabIndex = 0;
+            this.btnSave.Text = "💾 حفظ";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // frmUnitEdit
+            // 
+            this.AcceptButton = this.btnSave;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancel;
+            this.ClientSize = new System.Drawing.Size(642, 406);
+            this.Controls.Add(this.pnlBody);
+            this.Controls.Add(this.pnlFooter);
+            this.Controls.Add(this.pnlHeader);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "frmUnitEdit";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.RightToLeftLayout = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "وحدة";
+            this.Load += new System.EventHandler(this.frmUnitEdit_Load);
+            this.pnlHeader.ResumeLayout(false);
+            this.pnlBody.ResumeLayout(false);
+            this.pnlBody.PerformLayout();
+            this.pnlFooter.ResumeLayout(false);
+            this.ResumeLayout(false);
+
+        }
+
+        private System.Windows.Forms.Panel pnlHeader;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Panel pnlBody;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Label lblSymbol;
+        private System.Windows.Forms.TextBox txtSymbol;
+        private System.Windows.Forms.Panel pnlFooter;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnCancel;
+    }
+}

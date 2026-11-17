@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2E0B6AD3-5000-4FD5-9D73-10EA5AA8A814}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>InventorySystem</RootNamespace>
+    <AssemblyName>InventorySystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="InventorySystem.UI\DataAccess\CategoryDAL.cs" />
+    <Compile Include="InventorySystem.UI\DataAccess\BatchDAL.cs" />
+    <Compile Include="InventorySystem.UI\DataAccess\AuditLogDAL.cs" />
+    <Compile Include="InventorySystem.UI\DataAccess\RolePermissionDAL.cs" />
+    <Compile Include="InventorySystem.UI\DataAccess\UserRoleDAL.cs" />
+    <Compile Include="InventorySystem.UI\DataAccess\RoleDAL.cs" />
+    <Compile Include="InventorySystem.UI\DataAccess\PermissionDAL.cs" />
+    <Compile Include="InventorySystem.UI\DataAccess\UserDAL.cs" />
+    <Compile Include="InventorySystem.UI\DataAccess\StocktakeDetailDAL.cs" />
+    <Compile Include="InventorySystem.UI\DataAccess\StocktakeDAL.cs" />
+    <Compile Include="InventorySystem.UI\DataAccess\StockMovementDetailDAL.cs" />
+    <Compile Include="InventorySystem.UI\DataAccess\StockMovementDAL.cs" />
+    <Compile Include="InventorySystem.UI\DataAccess\InventoryBatchDAL.cs" />
+    <Compile Include="InventorySystem.UI\DataAccess\InventoryDAL.cs" />
+    <Compile Include="InventorySystem.UI\DataAccess\PartnerDAL.cs" />
+    <Compile Include="InventorySystem.UI\DataAccess\WarehouseDAL.cs" />
+    <Compile Include="InventorySystem.UI\DataAccess\ProductDAL.cs" />
+    <Compile Include="InventorySystem.UI\DataAccess\UnitDAL.cs" />
+    <Compile Include="InventorySystem.UI\DataAccess\DatabaseHelper.cs" />
+    <Compile Include="InventorySystem.UI\Forms\frmAddMovement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmAddMovement.Designer.cs">
+      <DependentUpon>frmAddMovement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmBackup.Designer.cs">
+      <DependentUpon>frmBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmCategories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmCategories.Designer.cs">
+      <DependentUpon>frmCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmCategoryEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmCategoryEdit.Designer.cs">
+      <DependentUpon>frmCategoryEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmInventory.Designer.cs">
+      <DependentUpon>frmInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmLookups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmLookups.Designer.cs">
+      <DependentUpon>frmLookups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmMovementDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmMovementDetails.Designer.cs">
+      <DependentUpon>frmMovementDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmMovements.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmMovements.Designer.cs">
+      <DependentUpon>frmMovements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmNewStocktake.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmNewStocktake.Designer.cs">
+      <DependentUpon>frmNewStocktake.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmPartnerEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmPartnerEdit.Designer.cs">
+      <DependentUpon>frmPartnerEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmPartners.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmPartners.Designer.cs">
+      <DependentUpon>frmPartners.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmPermissions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmPermissions.Designer.cs">
+      <DependentUpon>frmPermissions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmProductEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmProductEdit.Designer.cs">
+      <DependentUpon>frmProductEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmProducts.Designer.cs">
+      <DependentUpon>frmProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmReports.Designer.cs">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmRoles.Designer.cs">
+      <DependentUpon>frmRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmStocktakeDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmStocktakeDetails.Designer.cs">
+      <DependentUpon>frmStocktakeDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmStocktakes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmStocktakes.Designer.cs">
+      <DependentUpon>frmStocktakes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmUnitEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmUnitEdit.Designer.cs">
+      <DependentUpon>frmUnitEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmUnits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmUnits.Designer.cs">
+      <DependentUpon>frmUnits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmUserEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmUserEdit.Designer.cs">
+      <DependentUpon>frmUserEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmUsers.Designer.cs">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmWarehouseEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmWarehouseEdit.Designer.cs">
+      <DependentUpon>frmWarehouseEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmWarehouses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Forms\frmWarehouses.Designer.cs">
+      <DependentUpon>frmWarehouses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Business\BatchBLL.cs" />
+    <Compile Include="InventorySystem.UI\Business\CategoryBLL.cs" />
+    <Compile Include="InventorySystem.UI\Business\InventoryBLL.cs" />
+    <Compile Include="InventorySystem.UI\Business\PartnerBLL.cs" />
+    <Compile Include="InventorySystem.UI\Business\PermissionBLL.cs" />
+    <Compile Include="InventorySystem.UI\Business\ProductBLL.cs" />
+    <Compile Include="InventorySystem.UI\Business\RoleBLL.cs" />
+    <Compile Include="InventorySystem.UI\Business\SessionManager.cs" />
+    <Compile Include="InventorySystem.UI\Business\StockMovementBLL.cs" />
+    <Compile Include="InventorySystem.UI\Business\StocktakeBLL.cs" />
+    <Compile Include="InventorySystem.UI\Business\UnitBLL.cs" />
+    <Compile Include="InventorySystem.UI\Business\UserBLL.cs" />
+    <Compile Include="InventorySystem.UI\Business\WarehouseBLL.cs" />
+    <Compile Include="InventorySystem.UI\Helpers\ExportHelper.cs" />
+    <Compile Include="InventorySystem.UI\Helpers\GridHelper.cs" />
+    <Compile Include="InventorySystem.UI\Helpers\LogHelper.cs" />
+    <Compile Include="InventorySystem.UI\Helpers\ComboHelper.cs" />
+    <Compile Include="InventorySystem.UI\Helpers\StringHelper.cs" />
+    <Compile Include="InventorySystem.UI\Helpers\DateHelper.cs" />
+    <Compile Include="InventorySystem.UI\Helpers\MessageHelper.cs" />
+    <Compile Include="InventorySystem.UI\Helpers\ValidationHelper.cs" />
+    <Compile Include="InventorySystem.UI\Helpers\PasswordHelper.cs" />
+    <Compile Include="InventorySystem.UI\Models\Entities\Category.cs" />
+    <Compile Include="InventorySystem.UI\Models\Entities\Batch.cs" />
+    <Compile Include="InventorySystem.UI\Models\Entities\AuditLog.cs" />
+    <Compile Include="InventorySystem.UI\Models\Entities\RolePermission.cs" />
+    <Compile Include="InventorySystem.UI\Models\Entities\UserRole.cs" />
+    <Compile Include="InventorySystem.UI\Models\Entities\Permission.cs" />
+    <Compile Include="InventorySystem.UI\Models\Entities\Role.cs" />
+    <Compile Include="InventorySystem.UI\Models\Entities\User.cs" />
+    <Compile Include="InventorySystem.UI\Models\Entities\StocktakeDetail.cs" />
+    <Compile Include="InventorySystem.UI\Models\Entities\Stocktake.cs" />
+    <Compile Include="InventorySystem.UI\Models\Entities\StockMovementDetail.cs" />
+    <Compile Include="InventorySystem.UI\Models\Entities\StockMovement.cs" />
+    <Compile Include="InventorySystem.UI\Models\Entities\InventoryBatch.cs" />
+    <Compile Include="InventorySystem.UI\Models\Entities\Inventory.cs" />
+    <Compile Include="InventorySystem.UI\Models\Entities\Partner.cs" />
+    <Compile Include="InventorySystem.UI\Models\Entities\Warehouse.cs" />
+    <Compile Include="InventorySystem.UI\Models\Entities\Product.cs" />
+    <Compile Include="InventorySystem.UI\Models\Entities\Unit.cs" />
+    <Compile Include="InventorySystem.UI\Models\Enums\AuditAction.cs" />
+    <Compile Include="InventorySystem.UI\Models\Enums\MovementType.cs" />
+    <Compile Include="InventorySystem.UI\Models\Enums\PartnerType.cs" />
+    <Compile Include="InventorySystem.UI\Models\Enums\StocktakeStatus.cs" />
+    <Compile Include="InventorySystem.UI\Program.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySystem.UI\Program.Designer.cs">
+      <DependentUpon>Program.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="InventorySystem.UI\Forms\frmAddMovement.resx">
+      <DependentUpon>frmAddMovement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventorySystem.UI\Forms\frmBackup.resx">
+      <DependentUpon>frmBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventorySystem.UI\Forms\frmCategories.resx">
+      <DependentUpon>frmCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventorySystem.UI\Forms\frmCategoryEdit.resx">
+      <DependentUpon>frmCategoryEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventorySystem.UI\Forms\frmInventory.resx">
+      <DependentUpon>frmInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventorySystem.UI\Forms\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventorySystem.UI\Forms\frmLookups.resx">
+      <DependentUpon>frmLookups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventorySystem.UI\Forms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventorySystem.UI\Forms\frmMovementDetails.resx">
+      <DependentUpon>frmMovementDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventorySystem.UI\Forms\frmMovements.resx">
+      <DependentUpon>frmMovements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventorySystem.UI\Forms\frmNewStocktake.resx">
+      <DependentUpon>frmNewStocktake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventorySystem.UI\Forms\frmPartnerEdit.resx">
+      <DependentUpon>frmPartnerEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventorySystem.UI\Forms\frmPartners.resx">
+      <DependentUpon>frmPartners.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventorySystem.UI\Forms\frmProductEdit.resx">
+      <DependentUpon>frmProductEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventorySystem.UI\Forms\frmProducts.resx">
+      <DependentUpon>frmProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventorySystem.UI\Forms\frmReports.resx">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventorySystem.UI\Forms\frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventorySystem.UI\Forms\frmUnitEdit.resx">
+      <DependentUpon>frmUnitEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventorySystem.UI\Forms\frmUnits.resx">
+      <DependentUpon>frmUnits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventorySystem.UI\Forms\frmUserEdit.resx">
+      <DependentUpon>frmUserEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventorySystem.UI\Forms\frmUsers.resx">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventorySystem.UI\Forms\frmWarehouseEdit.resx">
+      <DependentUpon>frmWarehouseEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="InventorySystem.UI\Resources\1791225504223.jpg" />
+    <Content Include="InventorySystem.UI\Resources\Icons\add.png" />
+    <Content Include="InventorySystem.UI\Resources\Icons\delete.png" />
+    <Content Include="InventorySystem.UI\Resources\Icons\edit.png" />
+    <Content Include="InventorySystem.UI\Resources\Icons\print.png" />
+    <Content Include="InventorySystem.UI\Resources\Icons\refresh.png" />
+    <Content Include="InventorySystem.UI\Resources\Icons\save.png" />
+    <Content Include="InventorySystem.UI\Resources\Icons\search.png" />
+    <Content Include="InventorySystem.UI\Resources\Images\login.png" />
+    <None Include="Resources\1791225504223.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
