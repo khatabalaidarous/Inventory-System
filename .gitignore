@@ -1,1 +1,8 @@
-bin\nobj\n*.suo\n*.user\n.vs\n
+.vs/
+bin/
+obj/
+packages/
+*.suo
+*.user
+*.log
+Logs/
